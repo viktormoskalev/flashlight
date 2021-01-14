@@ -1,0 +1,38 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .grid-l{
+    margin: -20px;
+    .grid-item{
+      padding: 20px;
+    }
+  }
+
+  .grid-m{
+    margin: -10px;
+    .grid-item{
+      padding: 10px;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-m){
+
+  
+  }
+  
+  @media screen and (min-width: $breakpoint-l){
+  
+    
+  }
+  
+  @media screen and (min-width: $breakpoint-xl){
+  
+    
+  }
+  @media screen and (min-width: $breakpoint-xxl){
+  
+    
+  }
+  

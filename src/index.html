@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  
+  <meta charset="UTF-8">
+  <title>Amazing page</title>
+  <link rel="stylesheet" href="css/main.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+</head>
+
+<body>
+<div class="wrapper">
+  @@include('./html-templates/header.html',{
+  })
+
+<div class="container">
+
+
+  <section>
+    @@include('./html-templates/form.html',{
+    })
+  </section>
+<div class="test" id="test1"> 
+  <span>1</span>
+<span>2</span>
+<span>3</span>
+<span>4</span>
+<span>5</span>
+<span>6</span>
+<span>7</span>
+<span>8</span>
+<span>9</span>
+<span>10</span>  </div>
+<div class="test" id="test2">2</div>
+<div class="test" id="test3">3</div>
+<div class="test" id="test4">4</div>
+<div class="test" id="test5">5</div>
+</div>
+
+
+@@include('./html-templates/footer.html',{
+})
+
+</div>
+
+
+
+<script src="js/main.js"> </script>
+</body>
+
+</html>
