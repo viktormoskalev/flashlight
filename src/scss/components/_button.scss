@@ -1,5 +1,5 @@
-$main-button:green;
-$main-button-hover:rgb(9, 65, 9);
+$main-button:#fff14f;
+$main-button-hover:#c2c0a7;
 
 
 // @keyframes radial-pulse {
@@ -18,23 +18,158 @@ $main-button-hover:rgb(9, 65, 9);
 //   }
 
 .button{
-    width: 100%;
+  transition: 0.5s;
+  text-decoration: none;
+    width: 280px;
     display: inline-block;
-    padding:10px 25px;
+    padding:25px 10px;
     background-color: $main-button;
     border:solid $main-button;
     font-size: 24px;
-    color:white;
-    border-radius: 4px;
+    font-weight: 600;
+    color:black;
+    border-radius: 50px;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+  }
+
+  .btn-arrow::after{
+    content:" ";
+    display: inline-block;
+    width: 20px;
+    margin-left: 5px;
+    background: url(../images/btn-icon2.png) center no-repeat;
+
   }
   
   .button:hover{
-    color:$green;
-    background-color: white;
+  border-color: $main-button-hover;
+    background-color: $main-button-hover;
   }
   
+  .btn-animation-mov{
+    animation-name: movbtn;
+     animation-duration: 2s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes movbtn{
+    0% {
+    
+      transform: scale3d(1,1,1);
+  }
+  50% {
+      transform: scale3d(1.05,1.05,1.05);
+  }
   
- 
+  100% {
+      transform: scale3d(1,1,1);
+   
+    }
+  }
+
+.nobtnwrap{
+  display: table;
+    margin-bottom: 50px;
+    margin-top: 20px;
+
+}
+  .animation-appear-button1{
+    animation-duration: 1s;
+    animation-name: animation-appear-button1;
+  }
+  .animation-appear-button2{
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-name: animation-appear-button2;
+    
+  }
+  .animation-appear-button3{
+    animation-duration: 1s;
+    animation-delay: 2000ms;
+    animation-name: animation-appear-button3;
+  }
+  @keyframes animation-appear-button2{
+    0% {
+      -webkit-transform: scale3d(1,1,1);
+      -ms-transform: scale3d(1,1,1);
+      transform: scale3d(1,1,1);
+  }
+  
+  10%, 20% {
+   
+      transform: scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg);
+  }
+  30%, 50%, 70%, 90% {
+
+      transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,3deg);
+  }
+  40%, 60%, 80% {
+      transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg);
+  }
+  100% {
+      transform: scale3d(1,1,1);
+  }
+  }
+  @keyframes animation-appear-button3{
+    0% {
+      transform: scale3d(1,1,1);
+  }
+  
+  30% {
+
+      transform: scale3d(1.25,.75,1);
+  }
+  40% {
+
+      transform: scale3d(0.75,1.25,1);
+  }
+  50% {
+
+      transform: scale3d(1.15,.85,1);
+  }
+  65% {
+  
+      transform: scale3d(.95,1.05,1);
+  }
+  75% {
+
+      transform: scale3d(1.05,.95,1);
+  }
+  100% {
+
+      transform: scale3d(1,1,1);
+  }
+  }
 
 
+  @keyframes animation-appear-button1{
+    0% {
+      opacity: 0;
+      transform: scale3d(.3,.3,.3);
+  }
+  50% {
+      opacity: 1;
+  }
+  }
+
+.smaller-button{
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+  @media screen and (min-width: $breakpoint-m){
+.button{
+
+width: 300px;
+  padding: 30px 10px;
+}
+.smaller-button{
+  padding: 20px;
+}
+  
+  }
+  

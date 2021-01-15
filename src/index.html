@@ -2,53 +2,95 @@
 <html lang="ru">
 
 <head>
-  
+
   <meta charset="UTF-8">
   <title>Amazing page</title>
   <link rel="stylesheet" href="css/main.css">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 </head>
 
 <body>
-<div class="wrapper">
-  @@include('./html-templates/header.html',{
-  })
 
-<div class="container">
+  <div class="wrapper">
+
+    <section class="section-timer">
+      <div class="section-background">
+        <div class="container">
+          <div class="grid">
+            <div class="grid-item width-1-2-xl">
+              @@include("./html-templates/timer.html")
+              <div class="nobtnwrap">
+                <div class="animation-appear-button1">
+                  <div class="animation-appear-button2">
+                    <div class="animation-appear-button3">
+                      <a class="btn-arrow btn-animation-mov button" href="poll.html">START THE POLL</a>
+             
+                    </div>
+                 
+                  </div>
+                </div>
+              </div>
+                         <h2>Take our Short Poll to Receive a </h2>
+              <h1> <span class="toggle-color">FREE</span> Tactical
+                Torch Flashlight</h1>
+              <figure class="flashlight-img">
+                <img src="/images/flashlight1.jpg" alt="flashlight">
+              </figure>
+              <h4>Please agree to follow the below rules:</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <section class="section-rules">
+        <div class="grid">
+          <div class="grid-item width-1-2-xl">
+          <h2>By Taking this Poll You Agree to the Following:</h2>
+          <ul class="list">
+  
+  
+            @@include('./html-templates/list-rules.html',{
+            "n":"01",
+            "desc":"You will answer truthfully and without bias (political or personal).",
+            })
+            @@include('./html-templates/list-rules.html',{
+            "n":"02",
+            "desc":'You will not attempt to "skew the results" by filling out the quiz out multiple times.',
+            })
+            @@include('./html-templates/list-rules.html',{
+            "n":"03",
+            "desc":'You will redeem a <b> maximum of 1 Free Flashlight Per Household. </b>',
+            })
+          </ul>
+<h2>If you agree to the above, you may proceed. If not, kindly close this tab.</h2>
+          <a class="btn-arrow btn-animation-mov smaller-button button" href="poll.html">START THE POLL</a>
+        </div>
+        </div>
+     
+      </section>
+    </div>
 
 
-  <section>
-    @@include('./html-templates/form.html',{
-    })
-  </section>
-<div class="test" id="test1"> 
-  <span>1</span>
-<span>2</span>
-<span>3</span>
-<span>4</span>
-<span>5</span>
-<span>6</span>
-<span>7</span>
-<span>8</span>
-<span>9</span>
-<span>10</span>  </div>
-<div class="test" id="test2">2</div>
-<div class="test" id="test3">3</div>
-<div class="test" id="test4">4</div>
-<div class="test" id="test5">5</div>
-</div>
-
-
-@@include('./html-templates/footer.html',{
-})
-
-</div>
 
 
 
-<script src="js/main.js"> </script>
+    <div class="grid-absolute">
+      <div class="grid-item grid-right-picture">
+        <figure class="figure"> <img src="/images/free.png" alt="img"></figure>
+      </div>
+
+    </div>
+
+  </div>
+  @@include('./html-templates/footer.html')
+
+
+  <script src="js/timer.js"> </script>
 </body>
 
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing page</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body>
+    <div class="wrapper poll-page">
+        <div class="poll-container">
+
+
+            <div class="poll-first">
+                <div class="poll-top-progressbar"></div>
+
+                <h1 class="pollquestion">Do you believe we need less guns, aka "Gun Control"? </h1>
+                <div class="poll-answer-container">
+                    <div class="poll-left poll-answer">
+                        <div class="poll-left-img poll-answer-img"> </div>
+                        <p class="poll-left-text">Absolutely NOT!</p>
+                    </div>
+                    <div class="poll-right poll-answer">
+                        <div class="poll-right-img poll-answer-img"> </div>
+                        <p class="poll-right-text poll-answer-text ">Yes</p>
+                    </div>
+                </div>
+                <div class="poll-progress-bar">
+                    <p class="poll-progress">1 / 7</p>
+                </div>
+            </div>
+
+            @@include('./html-templates/calmgift.html')
+        </div>
+
+
+    </div>
+
+    @@include('./html-templates/footer.html')
+    <script src="js/poll.js"> </script>
+</body>
+
+</html>
