@@ -1,7 +1,6 @@
 window.onload = function () {
     document.querySelector(".wrapper").style.backgroundImage = "url(images/pollback.png)";
-
-}
+};
 
 
 
@@ -45,7 +44,7 @@ const rightimgs = [
     "https://media1.giphy.com/media/26tPlltsuA89RwYww/giphy.gif?cid=646febc5jn4epfcu8h8id2o7es4j3wtxtory44581py1upmb&rid=giphy.gif",
     "https://media1.giphy.com/media/5t04Gq8VNgvdyXJE6b/giphy-downsized.gif?cid=646febc5no44j4fmjeokfwel6zw0fiy4wakljp11awmyhtbc&rid=giphy-downsized.gif",
     "https://media0.giphy.com/media/HOxMgcCBiCAYo/giphy.gif?cid=646febc5luu5bpjai7l6go7vmh8dulb3v6wd9x8gyxaug3p5&rid=giphy.gif"
-]
+];
 
 const lefttext = [
     'Absolutely NOT',
@@ -55,7 +54,7 @@ const lefttext = [
     'YES',
     'Yes',
     'Absolutely'
-]
+];
 
 const righttext = [
     'yes',
@@ -65,18 +64,19 @@ const righttext = [
     'No',
     "No, it isn't",
     'No, I do not support the 2nd Amendment'
-]
+];
 
+const maxnubmers = 7;
 
-
-function changetext(li = leftimgs[0], ri = rightimgs[0], lt = lefttext[0], rt = righttext[0], question = questions[0], number = 1, maxnubmers = 7, ) {
+function changetext(li , ri , lt , rt , question , number ) {
     pollquestion.innerText = question;
-    limg.style.backgroundImage = `url(${li})`;
-    rimg.style.backgroundImage = `url(${ri})`;
+    limg.style.backgroundImage = "url('" +  li + "')";
+   
+    rimg.style.backgroundImage = "url('"+ ri + "')";
     ltext.innerText = lt;
     rtext.innerText = rt;
 
-    pollprogr.innerText = number + " / " + maxnubmers
+    pollprogr.innerText = number + " / " + maxnubmers;
 
 }
 let ipoll = 0;
@@ -85,7 +85,7 @@ function gettext() {
 
     if (ipoll < 6) {
         ipoll++;
-        changetext(leftimgs[ipoll], rightimgs[ipoll], lefttext[ipoll], righttext[ipoll], question = questions[ipoll], number = (ipoll + 1))
+        changetext(leftimgs[ipoll], rightimgs[ipoll], lefttext[ipoll], righttext[ipoll], questions[ipoll], (ipoll + 1));
         topprogress.style.right = (100 - 100 / (7 / (ipoll + 1))) + "%";
     } else {
         document.querySelector(".poll-first").style.display = "none";

@@ -1,9 +1,9 @@
 window.onload =function(){
 document.querySelector(".wrapper").style.backgroundImage="url(images/mainbackground.jpg)";
-}
+};
 
 
-const timerOnPage =()=>{
+const timerOnPage = function(){
     const timerStartTime = 8;
     const seconds = document.querySelector(".seconds-counter");
     const minutes = document.querySelector(".minutes-counter");
@@ -13,7 +13,7 @@ const timerOnPage =()=>{
     let i = 60 * timerStartTime;
     let min = timerStartTime;
     
-    const timeRender = () => {
+    const timeRender = function()  {
     
       if(d.getSeconds()>9){
         seconds.innerText = d.getSeconds();
@@ -22,7 +22,7 @@ const timerOnPage =()=>{
       }
     
       if (d.getMinutes() != min) {
-        min = d.getMinutes()
+        min = d.getMinutes();
         minutes.innerText ="0" + d.getMinutes();
       }
       d.setSeconds(d.getSeconds() - 1);
@@ -30,7 +30,7 @@ const timerOnPage =()=>{
       if (i < 0) {
         clearInterval(timer);
       }
-    }
+    };
     const timer = setInterval(timeRender, 1000);
-  }
+  };
   timerOnPage();
