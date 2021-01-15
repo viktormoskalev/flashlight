@@ -20,7 +20,7 @@ background-size: cover;
 }
 
 .poll-first{
-    padding:10px 20px;
+    padding:10px 5px;
 }
 
 .poll-top-progressbar{
@@ -46,30 +46,29 @@ left:0;
     justify-content: center;
     align-items: stretch;
 
+
 }
 
 .poll-answer {
     flex-shrink: 0;
-    width: calc(50vw - 40px);
+    width: calc(50vw - 20px);
     min-height: calc(50vw - 40px);
     border-radius: 5px;
     transition: 0.1s;
     text-align: center;
     margin: 10px;
-    padding: 10px;
+    padding: 8px;
     background-color: rgb(242, 242, 242);
     cursor: pointer;
 
     &:hover {
         background-color: rgb(216, 217, 231);
     }
-.poll-answer-text{
 
-}
 }
 .poll-answer-img {
 width: 100%;
-padding-bottom: 80%;
+height: 140px;
 
     transition: all 0.5s ease-out 0s;
     background-size: cover;
@@ -77,13 +76,6 @@ padding-bottom: 80%;
     background-position: center center;
 }
 
-.poll-left-img{
-    background-image: url("https://media3.giphy.com/media/gnE4FFhtFoLKM/giphy.gif?cid=646febc5jn4epfcu8h8id2o7es4j3wtxtory44581py1upmb&rid=giphy.gif");
-}
-.poll-right-img{
-    background-image: url("https://media3.giphy.com/media/J336VCs1JC42zGRhjH/giphy.gif?cid=646febc5iualkdfuasl2wquj7w7xq5maptpbolbao94z11g3&rid=giphy.gif");
- 
-} 
     
 
 .poll-progress {
@@ -99,6 +91,9 @@ padding-bottom: 80%;
         }
 
     }
+    .poll-answer-img{
+        height: 200px;
+    }
 
     .poll-answer {
         width: 200px;
@@ -111,6 +106,9 @@ padding-bottom: 80%;
         h1 {
             font-size: 29px;
         }
+    }
+    .poll-answer-img{
+        height: 250px;
     }
 
     .poll-answer {

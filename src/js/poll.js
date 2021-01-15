@@ -70,9 +70,11 @@ const maxnubmers = 7;
 
 function changetext(li , ri , lt , rt , question , number ) {
     pollquestion.innerText = question;
-    limg.style.backgroundImage = "url('" +  li + "')";
+    // limg.style.backgroundImage = "url('" +  li + "')";
+    limg.src = li;
    
-    rimg.style.backgroundImage = "url('"+ ri + "')";
+    // rimg.style.backgroundImage = "url('"+ ri + "')";
+    rimg.src = ri;
     ltext.innerText = lt;
     rtext.innerText = rt;
 
